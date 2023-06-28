@@ -1,0 +1,573 @@
+
+(object Petal
+    version    	42
+    _written   	"Rose 4.5.8054a"
+    charSet    	0)
+
+(object Design "Logical View"
+    is_unit    	TRUE
+    is_loaded  	TRUE
+    quid       	"5EA47494021C"
+    defaults   	(object defaults
+	rightMargin 	0.250000
+	leftMargin 	0.250000
+	topMargin  	0.250000
+	bottomMargin 	0.500000
+	pageOverlap 	0.250000
+	clipIconLabels 	TRUE
+	autoResize 	TRUE
+	snapToGrid 	TRUE
+	gridX      	16
+	gridY      	16
+	defaultFont 	(object Font
+	    size       	10
+	    face       	"Arial"
+	    bold       	FALSE
+	    italics    	FALSE
+	    underline  	FALSE
+	    strike     	FALSE
+	    color      	0
+	    default_color 	TRUE)
+	showMessageNum 	1
+	showClassOfObject 	TRUE
+	notation   	"Unified")
+    root_usecase_package 	(object Class_Category "Use Case View"
+	quid       	"5EA47494021E"
+	exportControl 	"Public"
+	global     	TRUE
+	logical_models 	(list unit_reference_list
+	    (object Class "User"
+		quid       	"5EA4749B035C"
+		stereotype 	"Actor")
+	    (object UseCase "Generate Image Train and Test Model"
+		quid       	"5EA474A800D6")
+	    (object UseCase "Upload Test Image"
+		quid       	"5EA474CF0325")
+	    (object UseCase "Classify Piture In Image"
+		quid       	"5EA474DB0245")
+	    (object UseCase "Exit"
+		quid       	"5EA475000349")
+	    (object Association "$UNNAMED$0"
+		quid       	"5EA47508024F"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$1"
+			quid       	"5EA4750903C9"
+			supplier   	"Use Case View::Generate Image Train and Test Model"
+			quidu      	"5EA474A800D6"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$2"
+			quid       	"5EA4750903CA"
+			supplier   	"Use Case View::User"
+			quidu      	"5EA4749B035C")))
+	    (object Association "$UNNAMED$3"
+		quid       	"5EA4750C02C8"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$4"
+			quid       	"5EA4750E00D1"
+			supplier   	"Use Case View::Upload Test Image"
+			quidu      	"5EA474CF0325"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$5"
+			quid       	"5EA4750E00D2"
+			supplier   	"Use Case View::User"
+			quidu      	"5EA4749B035C")))
+	    (object Association "$UNNAMED$6"
+		quid       	"5EA4751003D6"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$7"
+			quid       	"5EA4751103E7"
+			supplier   	"Use Case View::Classify Piture In Image"
+			quidu      	"5EA474DB0245"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$8"
+			quid       	"5EA4751103E8"
+			supplier   	"Use Case View::User"
+			quidu      	"5EA4749B035C")))
+	    (object Association "$UNNAMED$9"
+		quid       	"5EA475140307"
+		roles      	(list role_list
+		    (object Role "$UNNAMED$10"
+			quid       	"5EA475150353"
+			supplier   	"Use Case View::Exit"
+			quidu      	"5EA475000349"
+			is_navigable 	TRUE)
+		    (object Role "$UNNAMED$11"
+			quid       	"5EA475150354"
+			supplier   	"Use Case View::User"
+			quidu      	"5EA4749B035C")))
+	    (object Mechanism @1
+		logical_models 	(list unit_reference_list
+		    (object Object "User"
+			quid       	"5EA4756203E7"
+			collaborators 	(list link_list
+			    (object Link
+				quid       	"5EA4757A01CC"
+				supplier   	"Application"
+				quidu      	"5EA4756902A6"
+				messages   	(list Messages
+				    (object Message "1.Upload Image Train And Test Model"
+					quid       	"5EA4757A0207"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	0)
+				    (object Message "2.Upload Test Image"
+					quid       	"5EA4759203A0"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	1)
+				    (object Message "3.Classify Piture In Image"
+					quid       	"5EA475A40374"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	2)
+				    (object Message "4.Exist"
+					quid       	"5EA475BF03CA"
+					frequency  	"Aperiodic"
+					synchronization 	"Simple"
+					dir        	"FromClientToSupplier"
+					sequence   	""
+					ordinal    	3))))
+			persistence 	"Transient"
+			multi      	FALSE)
+		    (object Object "Application"
+			quid       	"5EA4756902A6"
+			persistence 	"Transient"
+			multi      	FALSE))))
+	logical_presentations 	(list unit_reference_list
+	    (object UseCaseDiagram "Main"
+		quid       	"5EA47494025F"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object UseCaseView "Use Case View::Generate Image Train and Test Model" @2
+			location   	(1664, 208)
+			label      	(object ItemLabel
+			    Parent_View 	@2
+			    location   	(1664, 346)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Generate Image Train and Test Model")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EA474A800D6"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Upload Test Image" @3
+			location   	(1696, 480)
+			label      	(object ItemLabel
+			    Parent_View 	@3
+			    location   	(1696, 618)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Upload Test Image")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EA474CF0325"
+			height     	118
+			autoResize 	TRUE)
+		    (object UseCaseView "Use Case View::Classify Piture In Image" @4
+			location   	(1680, 752)
+			label      	(object ItemLabel
+			    Parent_View 	@4
+			    location   	(1680, 890)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Classify Piture In Image")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EA474DB0245"
+			height     	118
+			autoResize 	TRUE)
+		    (object ClassView "Class" "Use Case View::User" @5
+			ShowCompartmentStereotypes 	TRUE
+			IncludeAttribute 	TRUE
+			IncludeOperation 	TRUE
+			location   	(736, 592)
+			label      	(object ItemLabel
+			    Parent_View 	@5
+			    location   	(736, 752)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	327
+			    justify    	0
+			    label      	"User")
+			icon       	"Actor"
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EA4749B035C"
+			annotation 	8
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$0" @6
+			location   	(1082, 446)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5EA47508024F"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$1" @7
+				Parent_View 	@6
+				location   	(266, -210)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EA4750903C9"
+				client     	@6
+				supplier   	@2
+				line_style 	0)
+			    (object RoleView "$UNNAMED$2" @8
+				Parent_View 	@6
+				location   	(266, -210)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EA4750903CA"
+				client     	@6
+				supplier   	@5
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$3" @9
+			location   	(1189, 535)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5EA4750C02C8"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$4" @10
+				Parent_View 	@9
+				location   	(373, -121)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EA4750E00D1"
+				client     	@9
+				supplier   	@3
+				line_style 	0)
+			    (object RoleView "$UNNAMED$5" @11
+				Parent_View 	@9
+				location   	(373, -121)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EA4750E00D2"
+				client     	@9
+				supplier   	@5
+				line_style 	0)))
+		    (object AssociationViewNew "$UNNAMED$6" @12
+			location   	(1181, 665)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5EA4751003D6"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$7" @13
+				Parent_View 	@12
+				location   	(365, 9)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EA4751103E7"
+				client     	@12
+				supplier   	@4
+				line_style 	0)
+			    (object RoleView "$UNNAMED$8" @14
+				Parent_View 	@12
+				location   	(365, 9)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EA4751103E8"
+				client     	@12
+				supplier   	@5
+				line_style 	0)))
+		    (object UseCaseView "Use Case View::Exit" @15
+			location   	(1712, 1056)
+			label      	(object ItemLabel
+			    Parent_View 	@15
+			    location   	(1712, 1194)
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	633
+			    justify    	0
+			    label      	"Exit")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EA475000349"
+			height     	118
+			autoResize 	TRUE)
+		    (object AssociationViewNew "$UNNAMED$9" @16
+			location   	(1197, 810)
+			stereotype 	TRUE
+			line_color 	3342489
+			quidu      	"5EA475140307"
+			roleview_list 	(list RoleViews
+			    (object RoleView "$UNNAMED$10" @17
+				Parent_View 	@16
+				location   	(381, 154)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EA475150353"
+				client     	@16
+				supplier   	@15
+				line_style 	0)
+			    (object RoleView "$UNNAMED$11" @18
+				Parent_View 	@16
+				location   	(381, 154)
+				stereotype 	TRUE
+				line_color 	3342489
+				quidu      	"5EA475150354"
+				client     	@16
+				supplier   	@5
+				line_style 	0)))))
+	    (object InteractionDiagram "NewDiagram"
+		mechanism_ref 	@1
+		quid       	"5EA4756000A2"
+		title      	"NewDiagram"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list
+		    (object InterObjView "User" @19
+			location   	(448, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@19
+			    location   	(448, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"User")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EA4756203E7"
+			width      	300
+			height     	929
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @20
+			    location   	(448, 368)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @21
+			    location   	(448, 560)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @22
+			    location   	(448, 752)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @23
+			    location   	(448, 944)
+			    line_color 	3342489
+			    InterObjView 	@19
+			    height     	120
+			    y_coord    	60
+			    Nested     	FALSE))
+		    (object InterObjView "Application" @24
+			location   	(2016, 224)
+			font       	(object Font
+			    underline  	TRUE)
+			label      	(object ItemLabel
+			    Parent_View 	@24
+			    location   	(2016, 224)
+			    fill_color 	12058623
+			    anchor_loc 	1
+			    nlines     	2
+			    max_width  	282
+			    justify    	0
+			    label      	"Application")
+			icon_style 	"Icon"
+			line_color 	3342489
+			fill_color 	12058623
+			quidu      	"5EA4756902A6"
+			width      	300
+			height     	929
+			icon_height 	0
+			icon_width 	0
+			annotation 	1
+			Focus_Of_Control 	(object Focus_Of_Control "" @25
+			    location   	(2016, 368)
+			    line_color 	3342489
+			    InterObjView 	@24
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @26
+			    location   	(2016, 560)
+			    line_color 	3342489
+			    InterObjView 	@24
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @27
+			    location   	(2016, 752)
+			    line_color 	3342489
+			    InterObjView 	@24
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE)
+			Focus_Of_Control 	(object Focus_Of_Control "" @28
+			    location   	(2016, 944)
+			    line_color 	3342489
+			    InterObjView 	@24
+			    height     	60
+			    y_coord    	0
+			    Nested     	FALSE))
+		    (object InterMessView "" @29
+			location   	(0, 368)
+			label      	(object SegLabel @30
+			    Parent_View 	@29
+			    location   	(1232, 324)
+			    quidu      	"5EA4757A0207"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	675
+			    justify    	0
+			    label      	"1.Upload Image Train And Test Model"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@19
+			supplier   	@24
+			Focus_Src  	@20
+			Focus_Entry 	@25
+			origin     	(464, 368)
+			terminus   	(2000, 368)
+			ordinal    	0)
+		    (object InterMessView "" @31
+			location   	(0, 560)
+			label      	(object SegLabel @32
+			    Parent_View 	@31
+			    location   	(1232, 516)
+			    quidu      	"5EA4759203A0"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	372
+			    justify    	0
+			    label      	"2.Upload Test Image"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@19
+			supplier   	@24
+			Focus_Src  	@21
+			Focus_Entry 	@26
+			origin     	(464, 560)
+			terminus   	(2000, 560)
+			ordinal    	1)
+		    (object InterMessView "" @33
+			location   	(0, 752)
+			label      	(object SegLabel @34
+			    Parent_View 	@33
+			    location   	(1232, 708)
+			    quidu      	"5EA475A40374"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	463
+			    justify    	0
+			    label      	"3.Classify Piture In Image"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@19
+			supplier   	@24
+			Focus_Src  	@22
+			Focus_Entry 	@27
+			origin     	(464, 752)
+			terminus   	(2000, 752)
+			ordinal    	2)
+		    (object InterMessView "" @35
+			location   	(0, 944)
+			label      	(object SegLabel @36
+			    Parent_View 	@35
+			    location   	(1232, 900)
+			    quidu      	"5EA475BF03CA"
+			    anchor_loc 	1
+			    nlines     	1
+			    max_width  	128
+			    justify    	0
+			    label      	"4.Exist"
+			    pctDist    	0.500000
+			    height     	45
+			    orientation 	0)
+			line_color 	3342489
+			client     	@19
+			supplier   	@24
+			Focus_Src  	@23
+			Focus_Entry 	@28
+			origin     	(464, 944)
+			terminus   	(2000, 944)
+			ordinal    	3)))))
+    root_category 	(object Class_Category "Logical View"
+	quid       	"5EA47494021D"
+	exportControl 	"Public"
+	global     	TRUE
+	subsystem  	"Component View"
+	quidu      	"5EA47494021F"
+	logical_models 	(list unit_reference_list)
+	logical_presentations 	(list unit_reference_list
+	    (object ClassDiagram "Main"
+		quid       	"5EA474940225"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    root_subsystem 	(object SubSystem "Component View"
+	quid       	"5EA47494021F"
+	physical_models 	(list unit_reference_list)
+	physical_presentations 	(list unit_reference_list
+	    (object Module_Diagram "Main"
+		quid       	"5EA47494025E"
+		title      	"Main"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    process_structure 	(object Processes
+	quid       	"5EA474940220"
+	ProcsNDevs 	(list
+	    (object Process_Diagram "Deployment View"
+		quid       	"5EA474940222"
+		title      	"Deployment View"
+		zoom       	100
+		max_height 	28350
+		max_width  	21600
+		origin_x   	0
+		origin_y   	0
+		items      	(list diagram_item_list))))
+    properties 	(object Properties
+	quid       	"5EA474940221"))
